@@ -1,8 +1,8 @@
-# Ethereum Block Explorer
+# DB's Block Explorer
 
 The lessons this week covered the Ethereum JSON-RPC API and the `ethers.js` library giving us the ability to query the Ethereum blockchain and make transactions!
 
-Let's put that knowledge to the test by building our very own **Ethereum Block Explorer**!
+Let's put that knowledge to the test by building our very own **DB's Block Explorer**!
 
 Blockexplorers give us the ability to view lots of different information about the blockchain including data about:
   * the blockchain network itself

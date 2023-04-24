@@ -1,36 +1,38 @@
-import { Alchemy, Network } from 'alchemy-sdk';
-import { useEffect, useState } from 'react';
-
-import './App.css';
-
-// Refer to the README doc for more information about using API
-// keys in client-side code. You should never do this in production
-// level code.
-const settings = {
-  apiKey: process.env.REACT_APP_ALCHEMY_API_KEY,
-  network: Network.ETH_MAINNET,
-};
-
-
-// In this week's lessons we used ethers.js. Here we are using the
-// Alchemy SDK is an umbrella library with several different packages.
-//
-// You can read more about the packages here:
-//   https://docs.alchemy.com/reference/alchemy-sdk-api-surface-overview#api-surface
-const alchemy = new Alchemy(settings);
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import "./App.css";
+import Blocks from "./Pages/Blocks/Blocks";
+import BlockDetail from "./Pages/BlockDetail/BlockDetail";
+import Transaction from "./Pages/Transaction/Transaction";
+import TransactionDetail from "./Pages/TransactionDetail/TransactionDetail";
+import FeeRecipient from "./Pages/Fee Recipient/FeeRecipient";
+import Coming from "./Pages/Coming/Coming";
+import "bootstrap/dist/css/bootstrap.css";
+import Breadcrumbs from "./Component/Breadcrumbs/Breadcrumbs";
 
 function App() {
-  const [blockNumber, setBlockNumber] = useState();
+  return (
+    <>
+    
+      <h1 className="text-center mt-5"> <a href="/">Block Explorer </a> </h1>
+    
 
-  useEffect(() => {
-    async function getBlockNumber() {
-      setBlockNumber(await alchemy.core.getBlockNumber());
-    }
-
-    getBlockNumber();
-  });
-
-  return <div className="App">Block Number: {blockNumber}</div>;
+      <BrowserRouter>
+        <Breadcrumbs />
+        <Switch>
+          <Route exact path="/" component={ Blocks }/>
+          <Route path="/blocks" component={Blocks} />
+          <Route path="/block/:block" component={BlockDetail} />
+          <Route path="/transactions/:block" component={Transaction} />
+          <Route
+            path="/transactiondetail/:hash"
+            component={TransactionDetail}
+          />
+          <Route path="/feerecipient" component={FeeRecipient} />
+          <Route path="/coming" component={Coming} />
+        </Switch>
+      </BrowserRouter>
+    </>
+  );
 }
 
 export default App;

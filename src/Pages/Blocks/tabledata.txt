@@ -1,0 +1,35 @@
+{
+  blockList.map((dataItem, index) => (
+    <>
+      <tr key={index}>
+        <td>
+          <Link className="link-text" to={`/block/${dataItem.blocknumber}`}>
+            {dataItem.blocknumber}
+          </Link>
+        </td>
+        <td>{dataItem.age}</td>
+        <td>
+          <Link className="link-text" to={`/transactions/${dataItem.block}`}>
+            {dataItem.txn}
+          </Link>
+        </td>
+        <td>
+          <Link
+            className="link-text"
+            to={`/feerecipient/${dataItem.feerecipient}`}
+          >
+            {dataItem.feerecipient}
+          </Link>
+        </td>
+        <td>
+          {dataItem.gasused}
+          <ProgressBar now={gasusedStringSlice(dataItem.gasused)} />
+        </td>
+        <td>{dataItem.gaslimit}</td>
+        <td>{dataItem.basefee}</td>
+        <td>{dataItem.reward}</td>
+        <td>{dataItem.burntdfee}</td>
+      </tr>
+    </>
+  ));
+}

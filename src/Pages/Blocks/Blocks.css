@@ -1,0 +1,12 @@
+.link-text {
+  list-style: none;
+  text-decoration: none;
+}
+.table {
+  cursor: pointer;
+  position: relative !important;
+  top: 1rem !important;
+}
+.progress {
+  height: 2px !important;
+}

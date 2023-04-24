@@ -1,0 +1,45 @@
+.block-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  margin-top: 1rem !important;
+}
+
+.block-detail {
+  height: fit-content;
+  box-shadow: 0 0.5rem 3rem rgb(189 197 209 / 50%);
+  border: 1px solid;
+  border-radius: 15px;
+  /* background-color: black; */
+}
+
+.block-detail-1,
+.block-detail-2,
+.block-detail-3 {
+  display: flex;
+}
+
+.block-detail-text {
+  display: flex;
+  flex-direction: column;
+}
+.block-detail-1 span,
+.block-detail-2 span,
+.block-detail-3 span {
+  padding: 8px;
+}
+
+.status-btn {
+  width: fit-content;
+  color: #00a186 !important;
+}
+
+.tooltip-inner {
+  max-width: 500px !important;
+  background-color: #10153e !important;
+}
+
+.fa-copy {
+  color: #adb5bd !important;
+}

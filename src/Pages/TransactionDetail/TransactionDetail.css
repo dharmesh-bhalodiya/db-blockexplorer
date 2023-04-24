@@ -1,0 +1,48 @@
+.transaction-main {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  height: fit-content;
+}
+
+.transaction-detail {
+  height: fit-content;
+  box-shadow: 0 0.5rem 3rem rgb(189 197 209 / 50%);
+  border: 1px solid;
+  border-radius: 15px;
+  margin-top: 1rem !important;
+  /* background-color: black; */
+}
+
+.transaction-detail-1,
+.transaction-detail-2,
+.transaction-detail-3 {
+  display: flex;
+}
+
+.transaction-detail-text {
+  display: flex;
+  flex-direction: column;
+}
+.transaction-detail-1 span,
+.transaction-detail-2 span,
+.transaction-detail-3 span {
+  padding: 8px;
+}
+
+.status-btn {
+  width: fit-content;
+  font-size: small;
+  color: #00a186 !important;
+}
+
+.tooltip-inner {
+  padding: 4px !important;
+  max-width: 400px !important;
+  background-color: #10153e !important;
+  text-align: start !important;
+}
+
+.fa-copy {
+  color: #adb5bd !important;
+}
